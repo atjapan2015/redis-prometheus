@@ -1,5 +1,6 @@
 ```azure
 docker build -t atjapan2015/redis-prometheus:latest .
+docker push atjapan2015/redis-prometheus:latest
 ```
 
 ```azure
@@ -7,5 +8,6 @@ docker run -d --name redis-prometheus -v /tmp/config:/u01/data/sd_configs/redis 
 ```
 
 ```azure
-curl 192.168.31.15:9091/prometheus/targets/add/192.168.1.3_6379
+curl 127.0.0.1:9091/prometheus/targets/add/127.0.0.1_9121
+curl 127.0.0.1:9091/prometheus/targets/add/127.0.0.1_9121
 ```
